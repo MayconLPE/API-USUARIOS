@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "a:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj": {}
+    "A:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj": {}
   },
   "projects": {
-    "a:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj": {
+    "A:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "a:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj",
+        "projectUniqueName": "A:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj",
         "projectName": "API-USUARIOS",
-        "projectPath": "a:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj",
+        "projectPath": "A:\\DEV\\API-USUARIOS\\API-USUARIOS.csproj",
         "packagesPath": "C:\\Users\\mayco\\.nuget\\packages\\",
-        "outputPath": "a:\\DEV\\API-USUARIOS\\obj\\",
+        "outputPath": "A:\\DEV\\API-USUARIOS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mayco\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,26 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
