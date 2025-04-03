@@ -15,5 +15,3 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 
 
--- Para criar pasta .vs
-mkdir .vs

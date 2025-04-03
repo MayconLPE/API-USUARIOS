@@ -17,9 +17,29 @@ namespace API_USUARIOS.Services.Users
             _context = context;
         }
 
-        public Task<UserModelResponse<UserModel>> BuscarUserPorId(int idUser)
+        public async Task<UserModelResponse<UserModel>> BuscarUserPorId(int idUser)
         {
-            throw new NotImplementedException();
+            UserModelResponse<UserModel> resposta = new UserModelResponse<UserModel>();
+            try
+            {
+                var user = await _context.Users.FindAsync(idUser); // pegar usuario pelo id
+                if (user == null)
+                {
+                    resposta.Mensagem = "Usuario não encontrado!";
+                    resposta.Status = false;
+                    return resposta;
+                }
+                resposta.Dados = user;
+                resposta.Mensagem = "Usuario encontrado com sucesso!";
+
+                return resposta;
+            }
+            catch (Exception ex)
+            { 
+                resposta.Mensagem = ex.Message;
+                resposta.Status = false;
+                return resposta;
+            };
         }
 
         public async Task<UserModelResponse<List<UserModel>>> ListarUsuarios()
