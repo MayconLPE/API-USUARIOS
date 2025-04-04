@@ -33,5 +33,11 @@ namespace API_USUARIOS.Controllers
             var user = await _userService.BuscarUserPorId(idUser);
             return Ok(user);
         }
+        [HttpPost("CriarUser")]
+        public async Task<ActionResult<UserModelResponse<List<UserModel>>>> CriarUser([FromBody] CriarUserDto criarUserDto)
+        {
+            var user = await _userService.CriarUser(criarUserDto);
+            return Ok(user);
+        }
     }
 }
