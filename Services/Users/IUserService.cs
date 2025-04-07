@@ -11,5 +11,11 @@ namespace API_USUARIOS.Services.Users
     {
         Task<UserModelResponse<List<UserModel>>> ListarUsuarios();
         Task<UserModelResponse<UserModel>> BuscarUserPorId(int idUser);
+        Task<UserModelResponse<List<UserModel>>> CriarUser(CriarUserDto criarUserDto);
+        Task<UserModelResponse<List<UserModel>>> AtualizarUser(int idUser, UserModel userModel);
+        Task<UserModelResponse<List<UserModel>>> DeletarUser(int idUser);
+        Task<UserModelResponse<List<UserModel>>> ListarUsuariosPorNome(string nome);
+        Task<UserModelResponse<List<UserModel>>> ListarUsuariosPorNomeOuEmail(string nome, string email);
+
     }
 }

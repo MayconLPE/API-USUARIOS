@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 namespace API_USUARIOS.Controllers
 {
     [Route("[controller]")]
-    public class UserController : Controller
+    public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
         public UserController(IUserService iUserService)
@@ -25,6 +25,19 @@ namespace API_USUARIOS.Controllers
         {
             var users = await _userService.ListarUsuarios();
             return Ok(users);
+        }
+        
+        [HttpGet("BuscarUserPorId/{idUser}")]
+        public async Task<ActionResult<UserModelResponse<UserModel>>> BuscarUserPorId(int idUser)
+        {
+            var user = await _userService.BuscarUserPorId(idUser);
+            return Ok(user);
+        }
+        [HttpPost("CriarUser")]
+        public async Task<ActionResult<UserModelResponse<List<UserModel>>>> CriarUser([FromBody] CriarUserDto criarUserDto)
+        {
+            var user = await _userService.CriarUser(criarUserDto);
+            return Ok(user);
         }
     }
 }
