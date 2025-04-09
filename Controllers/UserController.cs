@@ -39,5 +39,11 @@ namespace API_USUARIOS.Controllers
             var user = await _userService.CriarUser(criarUserDto);
             return Ok(user);
         }
+        [HttpDelete("DeletarUser/{idUser}")]
+        public async Task<ActionResult<UserModelResponse<List<UserModel>>>> DeletarUser(int idUser)
+        {
+            var user = await _userService.DeletarUser(idUser);
+            return Ok(user);
+        }
     }
 }
