@@ -1,5 +1,5 @@
 # API-USUARIOS
-
+API .net 6 para cadastro e exibição de usuarios para ser consumida por https://github.com/MayconLPE/REACT-JS-USUARIOS-FRONT 
 - Dependencias/Pacotes:
 
 dotnet add package Microsoft.EntityFrameworkCore --version 6.0.0
